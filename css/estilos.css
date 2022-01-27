@@ -1,0 +1,2559 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Metropolis Medium";
+    src: url(../font/Metropolis-Medium.otf);
+}
+@font-face {
+    font-family: "Metropolis Black";
+    src: url(../font/Metropolis-Black.otf);
+}
+
+body{
+    background-color: #121212;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+    background-color: #050505;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #AB2123;
+    border: 1px solid #AB2123;
+}
+
+/****************************************** DESKTOP ********************************************/
+
+/* HEADER DESKTOP */
+
+/* header desktop div */
+.header__desktop--background{
+    width: 100%;
+    position: fixed;
+    display: flex;
+    z-index: 20;
+    flex-direction: row;
+    height: 4.5rem;
+    backdrop-filter: blur(140px);
+    background: linear-gradient(126.6deg, rgba(255, 255, 255, 0.09) 28.69%, rgba(255, 255, 255, 0) 100%);
+}
+/* header desktop logo */
+.header__desktop--div-logo{
+    width: 22.25vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header__desktop--logo{
+    width: 11rem;
+}
+/* nav desktop */
+.nav__desktop--div{
+    width: 55.25vw;
+    display: flex;
+}
+.nav__desktop--ul{
+    width: 96%;
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    position: relative;
+    top: 0.5rem;
+    align-items: center;
+}
+.nav__desktop--li{
+    text-align: center;
+    width: 100%;
+}
+.nav__desktop--a{
+    font-family: 'Metropolis Medium';
+    color: white;
+    font-size: 1.2rem;
+    transition: 0.3s;
+    text-decoration: none;
+}
+.nav__desktop--a:hover{
+    color: #AB2123;
+    text-decoration: none;
+}
+.nav__desktop--a-inicio{
+    position: relative;
+    left: 2.5vw;
+}
+.nav__desktop--a-productos{
+    position: relative;
+    left: 0.8vw;
+}
+.nav__desktop--a-que-hacemos{
+    position: relative;
+    left: 0.4vw;
+}
+.nav__desktop--a-equipo{
+    position: relative;
+    left: 1.1vw;
+}
+.nav__desktop--a-aliados{
+    position: relative;
+    left: 0.7vw;
+}
+.li-active-desktop{
+    color: #AB2123;
+    font-family: 'Metropolis Medium';
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+/* header redes */
+.header__desktop--div-redes{
+    width: 22.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header__desktop--redes-flex{
+    width: 9rem;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header__desktop--btn-facebook{
+    text-decoration: none;
+    width: 3rem;
+    height: 2.3rem;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid white;
+    color: white;
+    font-size: 1.25rem;
+    transition: 0.2s;
+    display: flex;
+    justify-content: center;
+}
+.header__desktop--btn-facebook:hover{
+    border: #AB2123 1px solid;
+    color: #AB2123;
+}
+.header__desktop--btn-instagram{
+    text-decoration: none;
+    width: 2.9rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    height: 2.3rem;
+    font-size: 1.25rem;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid white;
+    color: white;
+    display: flex;
+    transition: 0.2s;
+    justify-content: center;
+}
+.header__desktop--btn-instagram:hover{
+    border: #AB2123 1px solid;
+    color: #AB2123;
+}
+.header__desktop--btn-twiter{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    width: 2.9rem;
+    color: white;
+    font-size: 1.25rem;
+    height: 2.3rem;
+    transition: 0.2s;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+.header__desktop--btn-twiter:hover{
+    border: #AB2123 1px solid;
+    color: #AB2123;
+}
+.header__mobile--background{
+    display: none;
+}
+
+/* SECCIONES DESKTOP */
+
+.main-desktop{
+    height: 303rem;
+}
+
+.div-loaded{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    z-index: 50;
+    background-color: #121212;
+    transition: 0.5s ease-out;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+.img-width-loading{
+    z-index: 1;
+    position: relative;
+    top: 43vh;
+    width: 14rem;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+}
+.p-loaded {
+    color: #AB2123;
+    font-family: 'Metropolis Medium';
+    position: fixed;
+    top: 53vh;
+    font-size: 1.3rem;
+}
+
+/* SECCION INICIO */
+
+.seccion-inicio{
+    height: 36.3rem;
+    display: flex;
+    justify-content: center;
+}
+.div-inicio-grid{
+    position: relative;
+    top: 7rem;
+    width: 68rem;
+    height: 27rem;
+    display: grid;
+    grid-template-columns: 34rem 34rem;
+    grid-template-rows: 40% 40% 20%;
+    grid-template-areas: 
+                        "div-h2-inicio div-img-inicio"
+                        "div-h3-inicio div-img-inicio"
+                        "div-btn-inicio div-img-inicio";
+}
+.div-h2-inicio{
+    grid-area: div-h2-inicio;
+    align-self: center;
+}
+.h2-inicio{
+    color: white;
+    font-family: 'Metropolis Black';
+    font-size: 3.75rem;
+}
+.div-h3-inicio{
+    grid-area: div-h3-inicio;
+}
+.h3-inicio{
+    color: white;
+    margin-top: 1rem;
+    font-family: 'Metropolis Black';
+    font-size: 2rem;
+}
+.div-btn-inicio{
+    grid-area: div-btn-inicio;
+}
+.btn-inicio{
+    margin-top: 1rem;
+    border-radius: 1rem;
+    width: 15rem;
+    height: 3.5rem;
+    border: none;
+    color: #ffffff;
+    font-family: 'Metropolis Medium';
+    background-color: #AB2123;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+    transition: 0.4s;
+}
+.btn-inicio:hover{
+    background-color: #F3F4F5;
+    color: #AB2123;
+}
+.div-img-inicio{
+    grid-area: div-img-inicio;
+    align-self: center;
+}
+.img-inicio{
+    width: 33.5rem;
+    border-radius: 1rem;
+    position: relative;
+    top: 1rem;
+}
+
+/* SECCION PRODUCTOS */
+
+.seccion-productos{
+    height: 50rem;
+}
+.h2-productos{
+    font-family: 'Metropolis Black';
+    color: white;
+    font-size: 3rem;
+    position: relative;
+    top: 5rem;
+    text-align: center;
+}
+.position-row-productos{
+    position: relative;
+    top: 8rem;
+}
+.div-row-productos{
+    position: relative;
+    width: 70rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.div-switch-flex{
+    width: 33.3%;
+    display: flex;
+    justify-content: center;
+}
+.container-card{
+    width: 21rem;
+    height: 31rem;
+    display: flex;
+    align-items: center;
+    background-color: #232323;
+    border-radius: 1rem;
+}
+.img-productos{
+    border-radius: 1rem;
+    width: 18.35rem;
+    height: 14.6rem;
+    margin-top: 2rem;
+}
+.title-card-productos{
+    color: #AB2123;
+    font-size: 1.3rem;
+    font-family: 'Metropolis Black';
+    text-align: center;
+}
+.p-switch{
+    font-size: 1.2rem;
+    font-family: 'Metropolis Medium';
+    text-align: center;
+    color: white;
+}
+.p-switch-abajo{
+    font-size: 0.9rem;
+    font-family: 'Metropolis Medium';
+    color: rgb(233, 233, 233);
+    text-align: center;
+}
+
+/* SECCION QUE HACEMOS */
+.seccion-que-hacemos{
+    height: 57rem;
+}
+.h2-que-hacemos{
+    font-family: 'Metropolis Black';
+    color: white;
+    position: relative;
+    top: 5.5rem;
+    font-size: 3rem;
+    text-align: center;
+}
+.h4-que-hacemos{
+    position: relative;
+    left: 20%;
+    width: 60%;
+    top: 6rem;
+    font-size: 1.5rem;
+    font-family: 'Metropolis Black';
+    color: white;
+    text-align: center;
+}
+.container-div-que-hacemos{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    position: absolute;
+    top: 109rem;
+    height: 31rem;
+}
+.flex-div1-que-hacemos{
+    width: 33.3%;
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+}
+.div-1-que-hacemos{
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    background: rgb(171,33,35);
+    background: linear-gradient(180deg, rgba(171,33,35,1) 0%, rgba(20,110,172,1) 100%);
+    width: 22rem;
+    height: 28rem;
+}
+.flex-div2-que-hacemos{
+    width: 33.3%;
+    display: flex;
+    justify-content: center;
+}
+.div-2-que-hacemos{
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    background: rgb(171,33,35);
+    background: linear-gradient(180deg, rgba(171,33,35,1) 0%, rgba(20,110,172,1) 100%);
+    width: 22rem;
+    height: 31rem;
+}
+.flex-div3-que-hacemos{
+    width: 33.3%;
+    display: flex;
+    justify-content: start;
+    align-items: flex-end;
+}
+.div-3-que-hacemos{
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    background: rgb(171,33,35);
+    background: linear-gradient(180deg, rgba(171,33,35,1) 0%, rgba(20,110,172,1) 100%);
+    width: 22rem;
+    height: 28rem;
+}
+.h5-que-hacemos{
+    text-align: center;
+    font-family: 'Metropolis Black';
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+.p-que-hacemos{
+    position: relative;
+    left: 10%;
+    width: 80%;
+    font-size: 1.1rem;
+    margin-top: 1.1rem;
+    text-align: center;
+    font-family: 'Metropolis Medium';
+    color: rgb(233, 233, 233);
+}
+.forma-1-que-hacemos{
+    -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
+    -moz-transform: matrix(-1, 0, 0, 1, 0, 0);
+    -o-transform: matrix(-1, 0, 0, 1, 0, 0);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    position: absolute;
+    top: 92rem;
+    width: 27rem;
+    z-index: -1;
+    float: left;
+}
+.forma-2-que-hacemos{
+    position: absolute;
+    width: 27rem;
+    z-index: -1;
+    top: 92rem;
+    right: 0;
+}
+.div-bottom-1-degradado{
+    position: absolute;
+    top: 140rem;
+    height: 1.75rem;
+    width: 100%;
+    background: rgba(20,110,172,1);
+    background: linear-gradient(0deg, rgba(171,33,35,1) 10%, rgba(20,110,172,1) 90%);
+}
+.div-bottom-2-degradado{
+    position: absolute;
+    top: 141.5rem;
+    height: 1.75rem;
+    width: 100%;
+    background: rgba(20,110,172,1);
+    background: linear-gradient(180deg, rgba(171,33,35,1) 10%, rgba(20,110,172,1) 90%);
+}
+
+/* SECCION EQUIPO */
+
+.seccion-equipo{
+    position: relative;
+    height: 75rem;
+}
+.h2-equipo{
+    font-family: 'Metropolis Black';
+    color: white;
+    font-size: 3rem;
+    position: relative;
+    top: 5rem;
+    text-align: center;
+}
+.div-grid-equipo{
+    width: 60%;
+    position: relative;
+    left: 20%;
+    top: 6rem;
+    display: grid;
+    height: 61rem;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 33,3% 33,3% 33,3%;
+    grid-template-areas: 
+                        "div-equipo-miguel div-equipo-rita"
+                        "div-equipo-manuel div-equipo-santiago"
+                        "div-equipo-tomas div-equipo-tomas"
+                        ;
+}
+.div-equipo-miguel{
+    grid-area: div-equipo-miguel;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.div-equipo-rita{
+    grid-area: div-equipo-rita;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.div-equipo-manuel{
+    grid-area: div-equipo-manuel;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.div-equipo-santiago{
+    grid-area: div-equipo-santiago;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.div-equipo-tomas{
+    grid-area: div-equipo-tomas;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.div-img-equipo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    background-color: white;
+}
+.img-equipo{
+    width: 10.5rem;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+}
+.p-equipo-nombre{
+    font-family: 'Metropolis Black';
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+    position: relative;
+    top: 1.3rem;
+}
+.p-equipo{
+    font-family: 'Metropolis Medium';
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+    position: relative;
+    top: 0.9rem;
+}
+.equipo-forma-1{
+    display: flex;
+    position: absolute;
+    top: 5rem;
+}
+.equipo-forma-2{
+    float: right;
+    position: relative;
+    bottom: 15rem;
+}
+.equipo-forma-mobile{
+    visibility: hidden;
+    opacity: 0;
+}
+.equipo-desktop-f{
+    width: 17rem;
+}
+
+/* SECCION ALIADOS */
+.seccion-aliados{
+    height: 31rem;
+    width: 100%;
+}
+.div-top-aliados{
+    height: 3rem;
+    justify-self: flex-start;
+    background-color: #146EAC;
+}
+.aliados-logos{
+    height: 25rem;
+    position: relative;
+    width: 100%;
+}
+.div-h2-aliados{
+    height: 32%;
+    width: 100%;
+}
+.h2-aliados{
+    font-family: 'Metropolis Black';
+    width: 70%;
+    position: relative;
+    left: 15%;
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    top: 3rem;
+}
+.div-logos-aliados{
+    height: 68%;
+}
+.contenedor-white-aliados{
+    background-color: white;
+    width: 80%;
+    position: relative;
+    top: 2rem;
+    left: 10%;
+    height: 8rem;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-rows: 100%;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
+    grid-template-areas: "div-icon-aliados-b div-icon-aliados-3d div-icon-aliados-c div-icon-aliados-m div-icon-aliados-p div-icon-aliados-t";
+}
+.div-icon-aliados-b{
+    grid-area: div-icon-aliados-b;
+}
+.logo-aliados-bizarro{
+    width: 7.5rem;
+}
+.div-icon-aliados-3d{
+    grid-area: div-icon-aliados-3d;
+}
+.logo-aliados-che3d{
+    width: 9rem;
+}
+.div-icon-aliados-c{
+    grid-area: div-icon-aliados-c;
+}
+.logo-aliados-creatibe{
+    width: 8rem;
+}
+.div-icon-aliados-m{
+    grid-area: div-icon-aliados-m;
+}
+.logo-aliados-municipalidad{
+    width: 9rem;
+}
+.div-icon-aliados-p{
+    grid-area: div-icon-aliados-p;
+}
+.logo-aliados-peek{
+    width: 5rem;
+}
+.div-icon-aliados-t{
+    grid-area: div-icon-aliados-t;
+}
+.logo-aliados-telefonica{
+    width: 6.5rem;
+}
+.div-bottom-aliados{
+    height: 3rem;
+    position: relative;
+    background-color: #146EAC;
+}
+
+/* SECCION FORMULARIO */
+.seccion-form{
+    height: 53.5rem;
+}
+.h3-formulario{
+    position: relative;
+    left: 25%;
+    width: 50%;
+    top: 6rem;
+    font-size: 1.9rem;
+    font-family: 'Metropolis Black';
+    color: white;
+    text-align: center;
+}
+.div-container-formulario{
+    width: 35%;
+    position: relative;
+    left: 32.5%;
+    border-radius: 2rem;
+    top: 7.5rem;
+    background-color: #AB2123;
+    height: 35rem;
+    display: flex;
+    flex-direction: column;
+}
+.form-grid-h3{
+    height: 12.5%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.h3-contactanos{
+    color: white;
+    font-family: 'Metropolis Black';
+    font-size: 2rem;
+}
+.form-grid-p{
+    height: 12.5%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.p-contactanos{
+    color: white;
+    font-size: 1rem;
+    font-family: 'Metropolis Medium';
+    height: 0.6rem;
+    text-align: center;
+}
+.div-contactanos{
+    height: 75%;
+}
+.form{
+    position: relative;
+    top: 2rem;
+    left: 10%;
+    height: 88%;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 17.5% 17.5% 50% 14%;
+    grid-template-areas: 
+                        "name-form telephone-form"
+                        "email-form email-form"
+                        "textarea-form textarea-form"
+                        "btn-form btn-form";
+}
+.name-form{
+    grid-area: name-form;
+    width: 95%;
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+    height: 2.9rem;
+    font-family: 'Metropolis Medium';
+    padding: 1rem;
+}
+.telephone-form{
+    position: relative;
+    left: 5%;
+    width: 95%;
+    border-radius: 1rem;
+    outline: none;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+    grid-area: telephone-form;
+    border: none;
+    font-family: 'Metropolis Medium';
+    height: 2.9rem;
+    padding: 1rem;
+}
+.email-form{
+    grid-area: email-form;
+    height: 2.9rem;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+    border: none;
+    padding: 1rem;
+    outline: none;
+    font-family: 'Metropolis Medium';
+    border-radius: 1rem;
+}
+.textarea-form{
+    grid-area: textarea-form;
+    border: none;
+    padding: 1rem;
+    border-radius: 1rem;
+    outline: none;
+    resize: none;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+    font-family: 'Metropolis Medium';
+    height: 10rem;
+}
+.btn-form{
+    grid-area: btn-form;
+    font-family: 'Metropolis Black';
+    color: #AB2123;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+    font-size: 1.1rem;
+    height: 2.7rem;
+    transition: 0.3s;
+}
+.btn-form:hover{
+    background-color: #146EAC;
+    color: white;
+}
+.formulario-forma-1{
+    position: absolute;
+    top: 253.5rem;
+}
+.formulario-circle-1{
+    width: 3.7rem;
+    height: 3.7rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 272rem;
+    left: 15%;
+    background-color: #F3F4F5;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+}
+.formulario-circle-2{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 282rem;
+    left: 7%;
+    background-color: #AB2123;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+}
+.formulario-circle-3{
+    width: 3.7rem;
+    height: 3.7rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 260rem;
+    right: 7%;
+    background-color: #AB2123;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+}
+.formulario-circle-4{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    position: absolute;
+    float: right;
+    top: 280rem;
+    right: 13%;
+    background-color: #146EAC;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+}
+.container-cartel-form{
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #00000041;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    width: 100vw;
+    z-index: 1;
+    height: 100vh;
+    transition: 0.5s all ease-in;
+}
+.active-cartel-form{
+    visibility: visible;
+    opacity: 1;
+}
+.cartel-form{
+    width: 24rem;
+    border-radius: 1rem;
+    height: 14.3rem;
+    background-color: white;
+    border: 2px solid #AB2123;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+}
+.p-cartel-form{
+    text-align: center;
+    position: relative;
+    top: 2.6rem;
+    font-size: 1.1rem;
+    font-family: 'Metropolis Black';
+    color: #AB2123;
+}
+.btn-cartel-form{
+    position: relative;
+    top: 3rem;
+    height: 2.2rem;
+    border-radius: 1rem;
+    font-size: 1.1rem;
+    left: 25%;
+    width: 50%;
+    background-color: #AB2123;
+    border: none;
+    outline: none;
+    color: #F3F4F5;
+    font-family: 'Metropolis Black';
+}
+#a-mail-form{
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Icon whatsapp */
+
+.div-whatsapp-btn{
+    position: absolute;
+    bottom: 2rem;
+    right: 2.5rem;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    z-index: 30;
+}
+.icon-whatsapp{
+    width: 4.7rem;
+    opacity: 0.95;
+    display: flex;
+    justify-content: center;
+    border: none;
+    transition: 0.3s;
+}
+.icon-whatsapp:hover{
+    opacity: 1;
+}
+
+/* FOOTER DESKTOP */
+
+.footer__container{
+    height: 22rem;
+    width: 100%;
+    background: linear-gradient(0deg, rgba(243, 244, 245, 0.15), rgba(243, 244, 245, 0.15)), #AB2123;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 85% 15%;
+    grid-template-areas: 
+                        "footer__div--apoyarnos footer__div--contactanos"
+                        "footer__div--copyright footer__div--copyright";
+}
+.footer__div--apoyarnos{
+    grid-area: "footer__div--apoyarnos";
+    display: flex;
+    height: 18.6rem;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.footer__apoyarnos--h3{
+    position: relative;
+    margin-top: 3rem;
+    left: 13vw;
+    font-family: 'Metropolis Black';
+    font-size: 2rem;
+    text-align: center;
+    color: #F3F4F5;
+    width: 13rem;
+}
+.footer__div--redes{
+    position: relative;
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12.5rem;
+    left: 13vw;
+}
+.footer__redes--a{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25vw;
+}
+.footer__redes--icon{
+    width: 2.3rem;
+    transition: 0.3s;
+}
+.footer__redes--icon:hover{
+    filter: invert(98%) sepia(100%) saturate(1%) hue-rotate(150deg) brightness(107%) contrast(101%);
+}
+.footer__logo--desktop{
+    position: relative;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12.5rem;
+    left: 13vw;
+}
+.footer__div--contactanos{    
+    grid-area: "footer__div--contactanos";
+    display: flex;
+    height: 18.6rem;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.footer__contactanos--h3{
+    font-family: 'Metropolis Black';
+    position: relative;
+    margin-top: 3rem;
+    right: 13.7vw;
+    height: 2rem;
+    font-size: 2rem;
+    color: #F3F4F5;
+    width: 13rem;
+}
+.footer__div--datos{
+    position: relative;
+    right: 13vw;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 15rem;
+}
+.footer__datos--div-email{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+}
+.footer__datos--div-number{
+    display: flex;
+    align-items: start;
+    flex-direction: row;
+}
+.footer__datos--div-location{
+    align-items: start;
+    display: flex;
+    flex-direction: row;
+}
+.footer__datos--p-e{
+    color: white;
+    font-family: 'Metropolis Medium';
+    margin-left: 0.65rem;
+}
+.footer__datos--p-n{
+    color: white;
+    font-family: 'Metropolis Medium';
+    margin-left: 0.5rem;
+}
+.footer__datos--p-l{
+    color: white;
+    font-family: 'Metropolis Medium';
+    margin-left: 0.7rem;
+}
+.footer__datos--img-l{
+    margin-left: 0.25rem;
+}
+.footer__div--copyright{
+    grid-area: "footer__div--copyright";
+    display: flex;
+    width: 200%;
+    justify-content: center;
+}
+.footer__copyright--p{
+    text-align: center;
+    font-family: 'Metropolis Medium';
+    font-size: 1.1rem;
+    color: #333333;
+}
+.footer__forma--1{
+    position: absolute;
+    margin-top: 14rem;
+}
+.footer__forma--2{
+    width: 2rem;
+    margin-left: 42%;
+    position: absolute;
+    justify-self: flex-start;
+}
+.footer__forma--3{
+    position: absolute;
+    justify-self: end;
+    align-self: flex-end;
+}
+.footer__logo--mobile{
+    display: none;
+}
+
+/* header 900px */
+
+@media screen and (min-width:992px) and (max-width:1366px){
+    .contenedor-white-aliados{
+        top: 0.4rem;
+    }
+    .seccion-inicio{
+        height: 36.3rem;
+        display: flex;
+        justify-content: center;
+    }
+    .div-inicio-grid{
+        position: relative;
+        top: 7rem;
+        width: 59rem;
+        height: 27rem;
+        display: grid;
+        grid-template-columns: 29.5rem 29.5rem;
+    }
+    .h2-inicio{
+        font-size: 3.2rem;
+    }
+    .h3-inicio{
+        font-size: 1.8rem;
+    }
+    .btn-inicio{
+        width: 13rem;
+        height: 3.3rem;
+    }
+    .div-img-inicio{
+        justify-self: center;
+        align-self: center;
+    }
+    .img-inicio{
+        width: 28rem;
+        border-radius: 1rem;
+    }
+    .div-row-productos{
+        width: 60rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .div-switch-flex{
+        width: 33.3%;
+    }
+    .container-card{
+        width: 17.5rem;
+        height: 28rem;
+    }
+    .img-productos{
+        border-radius: 1rem;
+        width: 15rem;
+        height: 11rem;
+        margin-top: 2rem;
+    }
+    .title-card-productos{
+        font-size: 1.2rem;
+    }
+    .p-switch{
+        font-size: 1.1rem;
+    }
+    .p-switch-abajo{
+        font-size: 0.8rem;
+        font-family: 'Metropolis Medium';
+        color: rgb(233, 233, 233);
+        text-align: center;
+    }
+    .h4-que-hacemos{
+        left: 10%;
+        width: 80%;
+    }
+    .container-div-que-hacemos{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        position: absolute;
+        top: 109rem;
+        height: 31rem;
+    }
+    .flex-div1-que-hacemos{
+        width: 33.3%;
+        display: flex;
+        justify-content: end;
+        align-items: flex-end;
+    }
+    .div-1-que-hacemos{
+        width: 19rem;
+        height: 25rem;
+    }
+    .flex-div2-que-hacemos{
+        width: 33.3%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .div-2-que-hacemos{
+        width: 19rem;
+        height: 28rem;
+    }
+    .flex-div3-que-hacemos{
+        width: 33.3%;
+        display: flex;
+        justify-content: start;
+        align-items: flex-end;
+    }
+    .div-3-que-hacemos{
+        width: 19rem;
+        height: 25rem;
+    }
+    .div-container-formulario{
+        width: 40%;
+        left: 30%;
+        top: 8rem;
+        background-color: #AB2123;
+    }
+}
+@media screen and (min-width:787px) and (max-width:991px){
+
+    
+    .header__mobile--background{
+        display: none;
+    }
+
+    .nav__desktop--a-inicio{
+        position: relative;
+        left: 0;
+    }
+    .nav__desktop--a-productos{
+        position: relative;
+        left: 0;
+    }
+    .nav__desktop--a-que-hacemos{
+        position: relative;
+        left: 0.5vw;
+    }
+    .nav__desktop--a{
+        font-size: 1rem;
+        transition: 0.3s;
+        text-decoration: none;
+    }
+    .div-inicio-grid{
+        position: relative;
+        top: 8rem;
+        width: 48rem;
+        height: 22rem;
+        display: grid;
+        grid-template-columns: 24rem 24rem;
+    }
+    .h2-inicio{
+        font-size: 2.5rem;
+    }
+    .h3-inicio{
+        margin-top: 1rem;
+        font-size: 1.6rem;
+    }
+    .btn-inicio{
+        width: 12rem;
+        height: 3rem;
+    }
+    .img-inicio{
+        width: 23.5rem;
+        border-radius: 1rem;
+    }
+    .div-row-productos{
+        width: 50rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .div-switch-flex{
+        width: 33.3%;
+    }
+    .container-card{
+        width: 16rem;
+        height: 25rem;
+    }
+    .img-productos{
+        border-radius: 1rem;
+        width: 13.5rem;
+        height: 10rem;
+        margin-top: 1.7rem;
+    }
+    .title-card-productos{
+        font-size: 1.15rem;
+    }
+    .p-switch{
+        font-size: 1.05rem;
+    }
+    .h4-que-hacemos{
+        margin-top: 2rem;
+        left: 10%;
+        width: 80%;
+    }
+    .container-div-que-hacemos{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        position: absolute;
+        top: 109rem;
+        height: 31rem;
+    }
+    .p-que-hacemos{
+        font-size: 1rem;
+    }
+    .flex-div1-que-hacemos{
+        width: 33.3%;
+        display: flex;
+        justify-content: end;
+        align-items: flex-end;
+    }
+    .div-1-que-hacemos{
+        width: 16rem;
+        height: 21rem;
+    }
+    .flex-div2-que-hacemos{
+        width: 33.3%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .div-2-que-hacemos{
+        width: 16rem;
+        height: 24rem;
+    }
+    .flex-div3-que-hacemos{
+        width: 33.3%;
+        display: flex;
+        justify-content: start;
+        align-items: flex-end;
+    }
+    .div-3-que-hacemos{
+        width: 16rem;
+        height: 21rem;
+    }
+    .forma-1-que-hacemos{
+        top: 99rem;
+        width: 23rem;
+    }
+    .forma-2-que-hacemos{
+        width: 23rem;
+        top: 99rem;
+    }
+    .p-switch-abajo{
+        font-size: 0.75rem;
+        font-family: 'Metropolis Medium';
+        color: rgb(233, 233, 233);
+        text-align: center;
+    }
+    .equipo-forma-1{
+        display: flex;
+        position: absolute;
+        top: 5rem;
+    }
+    .equipo-desktop-f{
+        width: 12.5rem;
+    }
+    .contenedor-white-aliados{
+        width: 90%;
+        left: 5%;
+        top: 2rem;
+    }
+    .logo-aliados-bizarro{
+        width: 6.5rem;
+    }
+    .logo-aliados-che3d{
+        width: 8rem;
+    }
+    .logo-aliados-creatibe{
+        width: 7rem;
+    }
+    .logo-aliados-municipalidad{
+        width: 8rem;
+    }
+    .logo-aliados-peek{
+        width: 4rem;
+    }
+    .logo-aliados-telefonica{
+        width: 5.5rem;
+    }
+    .div-container-formulario{
+        width: 50%;
+        left: 25%;
+        top: 4.5rem;
+        background-color: #AB2123;
+    }
+    .h3-formulario{
+        left: 30%;
+        width: 40%;
+        top: 3rem;
+        font-size: 1.9rem;
+    }
+    .formulario-circle-4{
+        right: 10%;
+    }
+    .formulario-forma-1{
+        position: absolute;
+        top: 253rem;
+    }
+    .form-desktop-f{
+        width: 16rem;
+    }
+    .div-whatsapp-btn{
+        position: absolute;
+        bottom: 1.7rem;
+        right: 2rem;
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        z-index: 30;
+    }
+    .icon-whatsapp{
+        width: 4.7rem;
+        display: flex;
+        justify-content: center;
+        border: none;
+    }
+    .footer__forma--2{
+        width: 2rem;
+        margin-left: 35%;
+        position: absolute;
+        justify-self: flex-start;
+    }
+    .footer__contactanos--h3{
+        right: 13.7vw;
+    }
+    .footer__div--datos{
+        right: 11.5vw;
+    }
+}
+
+/**************************************** MOBILE - TABLET ******************************************/
+
+@media screen and (max-width:786px){
+
+    /* HEADER MOBILE */
+
+    .header__desktop--background{
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .header__mobile--background{
+        position: fixed;
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        z-index: 20;
+        height: 3.5rem;
+        background-color: #121212;
+    }
+
+    /* mobile menu */
+
+    .header__mobile--div-menu{
+        width: 22.5vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .header__mobile--btn-menu{
+        border: none;
+        background-color: rgba(0, 0, 0, 0);
+    }
+    .header__mobile--icon-menu{
+        width: 1.2rem;
+    }
+
+    /* nav mobile menu */
+
+    .nav__mobile--container-nav{
+        position: fixed;
+        left: 0;
+        top: 3.5rem;
+        background-color: #0000003d;
+        visibility: hidden;
+        opacity: 0;
+        width: 100vw;
+        z-index: 1;
+        height: 100vh;
+        transition: 0.5s all ease-in;
+    }
+    .nav__mobile--active{
+        visibility: visible;
+        opacity: 1;
+    }
+    .nav__mobile--div-menu{
+        position: relative;
+        left: 0;
+        z-index: 2;
+        width: 17rem;
+        height: 24rem;
+        background-color: #232323;
+        display: flex;
+        flex-direction: column;
+        border-bottom-right-radius: 1rem;
+        border-top-right-radius: 1rem;
+    }
+    .nav__mobile--btn-close{
+        width: 5rem;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, 0);
+        border: none;
+    }
+    .nav__mobile--icon-close{
+        width: 1.05rem;
+    }
+    .nav__mobile--flex{
+        display: flex;
+        position: relative;
+        width: 100%;
+        height: 65%;
+        justify-content: center;
+        list-style: none;
+        flex-direction: column;
+        left: 0.3rem;
+    }
+    .nav__mobile--li{
+        font-size: 1.6rem;
+    }
+    .nav__mobile--a{
+        font-family: 'Metropolis Medium';
+        font-size: 1rem;
+        text-decoration: none;
+        color: white;
+    }
+    .nav__mobile--a:hover{
+        color: #AB2123;
+        text-decoration: none;
+    }
+    .li-active-mobile{
+        color: #AB2123;
+        font-family: 'Metropolis Medium';
+        font-size: 1rem;
+        text-decoration: none;
+    }
+    .nav__mobile--forma{
+        position: relative;
+        width: 5.5rem;
+    }
+
+    /* header redes mobile */
+    
+    .header__mobile--div-redes{
+        position: relative;
+        left: 0;
+        width: 15rem;
+        display: flex;
+    }
+    .header__mobile--redes-flex{
+        width: 11rem;
+        height: 50%;
+        display: flex;
+        position: relative;
+        left: 1.5rem;
+        align-items: center;
+        justify-content: center;
+    }
+    .header__mobile--btn{
+        width: 2.6rem;
+        height: 2rem;
+    }
+
+    /* header mobile logo */
+
+    .header__mobile--div-logo{
+        width: 55vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .header__mobile--logo{
+        width: 8.5rem;
+    }
+
+    /* SECCIONES MOBILE */
+
+    .main-mobile{
+        height: 278.5rem;
+    }
+
+    /* SECCION INICIO MOBILE */
+    .seccion-inicio{
+        height: 36.3rem;
+    }
+    .div-inicio-grid{
+        position: relative;
+        top: 5rem;
+        width: 80%;
+        height: 31rem;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 20% 46% 22% 12%;
+        grid-template-areas: 
+                            "div-h2-inicio"
+                            "div-img-inicio"
+                            "div-h3-inicio"
+                            "div-btn-inicio";
+    }
+    .div-h2-inicio{
+        grid-area: div-h2-inicio;
+        align-self: center;
+        display: flex;
+        justify-content: center;
+    }
+    .h2-inicio{
+        color: white;
+        width: 90%;
+        text-align: center;
+        font-family: 'Metropolis Black';
+        font-size: 2rem;
+    }
+    .div-h3-inicio{
+        grid-area: div-h3-inicio;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+    }
+    .h3-inicio{
+        color: white;
+        width: 90%;
+        font-family: 'Metropolis Black';
+        font-size: 1.25rem;
+        text-align: center;
+        margin-top: 0;
+    }
+    .div-btn-inicio{
+        grid-area: div-btn-inicio;
+        justify-self: center;
+    }
+    .btn-inicio{
+        border-radius: 1rem;
+        width: 10rem;
+        height: 2.8rem;
+        margin-top: 0;
+        border: none;
+        color: rgb(255, 255, 255);
+        font-family: 'Metropolis Medium';
+        background-color: #AB2123;
+        box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+    }
+    .btn-inicio:hover{
+        color: rgb(255, 255, 255);
+        background-color: #AB2123;
+    }
+    .div-img-inicio{
+        grid-area: div-img-inicio;
+        justify-self: center;
+    }
+    .img-inicio{
+        width: 19rem;
+        border-radius: 1rem;
+        top: 0;
+    }
+
+    /* SECCION PRODUCTOS MOBILE */
+    .seccion-productos{
+        height: 79.5rem;
+    }
+    .h2-productos{
+        font-family: 'Metropolis Black';
+        color: white;
+        font-size: 1.6rem;
+        position: relative;
+        top: 2rem;
+        text-align: center;
+    }
+    .position-row-productos{
+        position: relative;
+        top: 4rem;
+    }
+    .div-row-productos{
+        position: relative;
+        width: 100%;
+        height: 69rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .div-switch-flex{
+        width: 100%;
+        height: 33.3%;
+        display: flex;
+        align-items: center;
+    }
+    .container-card{
+        width: 19rem;
+        height: 22rem;
+        display: flex;
+        align-items: center;
+        background-color: #232323;
+        border-radius: 1rem;
+    }
+    .img-productos{
+        border-radius: 1rem;
+        width: 15rem;
+        height: 11rem;
+        margin-top: 1rem;
+    }
+    .title-card-productos{
+        color: #AB2123;
+        font-size: 1.2rem;
+        font-family: 'Metropolis Black';
+        text-align: center;
+    }
+    .p-switch{
+        font-size: 1.05rem;
+        font-family: 'Metropolis Medium';
+        text-align: center;
+        color: white;
+    }
+    .p-switch-abajo{
+        font-size: 0.7rem;
+        font-family: 'Metropolis Medium';
+        color: rgb(233, 233, 233);
+        text-align: center;
+    }
+
+    /* SECCION QUE HACEMOS MOBILE */
+    .seccion-que-hacemos{
+        height: 65rem;
+    }
+    .h2-que-hacemos{
+        top: 1rem;
+        font-size: 1.6rem;
+    }
+    .h4-que-hacemos{
+        left: 5%;
+        width: 90%;
+        top: 4rem;
+        font-size: 1.2rem;
+    }
+    .container-div-que-hacemos{
+        display: flex;
+        flex-direction: column;
+        left: 15%;
+        width: 70%;
+        background: rgb(171,33,35);
+        background: linear-gradient(180deg, rgba(171,33,35,1) 0%, rgba(20,110,172,1) 100%);
+        justify-content: center;
+        border-radius: 2rem;
+        position: absolute;
+        top: 136rem;
+        height: 42.5rem;
+    }
+    .flex-div1-que-hacemos{
+        height: 39%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .div-1-que-hacemos{
+        background-color: #12121200;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+        height: 100%;
+        width: 100%;
+    }
+    .flex-div2-que-hacemos{
+        height: 26%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .div-2-que-hacemos{
+        background-color: #12121200;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+        height: 100%;
+        width: 100%;
+    }
+    .flex-div3-que-hacemos{
+        height: 35%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .div-3-que-hacemos{
+        background-color: #12121200;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+        height: 100%;
+        width: 100%;
+    }
+    .h5-que-hacemos{
+        font-size: 1.2rem;
+        margin-top: 2rem;
+    }
+    .p-que-hacemos{
+        position: relative;
+        left: 5%;
+        width: 90%;
+        margin-top: 0.8rem;
+        font-size: 1rem;
+    }
+    .forma-1-que-hacemos{
+        top: 115rem;
+        width: 10rem;
+    }
+    .forma-2-que-hacemos{
+        width: 10rem;
+        top: 115rem;
+    }
+    .div-bottom-1-degradado{
+        top: 132.8rem;
+        height: 0.5rem;
+    }
+    .div-bottom-2-degradado{
+        top: 133.3rem;
+        height: 0.5rem;
+    }
+
+    /* SECCION EQUIPO MOBILE */
+    .seccion-equipo{
+        height: 45rem;
+    }
+    .h2-equipo{
+        font-family: 'Metropolis Black';
+        color: white;
+        top: 0;
+        font-size: 1.6rem;
+        text-align: center;
+    }
+    .div-grid-equipo{
+        width: 90%;
+        position: relative;
+        left: 5%;
+        top: 1rem;
+        display: grid;
+        height: 39.5rem;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 33,3% 33,3% 33,3%;
+        grid-template-areas: 
+                            "div-equipo-miguel div-equipo-rita"
+                            "div-equipo-manuel div-equipo-santiago"
+                            "div-equipo-tomas div-equipo-tomas"
+                            ;
+    }
+    .div-img-equipo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 8.5rem;
+        height: 8.5rem;
+        border-radius: 50%;
+        background-color: white;
+    }
+    .img-equipo{
+        width: 7.3rem;
+        box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+        border-radius: 50%;
+    }
+    .p-equipo-nombre{
+        font-family: 'Metropolis Black';
+        color: white;
+        font-size: 0.8rem;
+        text-align: center;
+        position: relative;
+        top: 0.5rem;
+    }
+    .p-equipo{
+        font-family: 'Metropolis Medium';
+        color: white;
+        font-size: 0.8rem;
+        text-align: center;
+        position: relative;
+        top: 0rem;
+    }
+    .equipo-forma-1{
+        display: none;
+    }
+    .equipo-forma-2{
+        display: none;
+    }
+    .equipo-forma-mobile{
+        position: relative;
+        bottom: 1rem;
+        float: right;
+        visibility: visible;
+        opacity: 1;
+    }
+    .equipo-mobile-f{
+        width: 7rem;
+        position: relative;
+        bottom: 4.5rem;
+    }
+
+    /* SECCION ALIADOS MOBILE */
+    .seccion-aliados{
+        height: 15rem;
+    }
+    .div-top-aliados{
+        height: 1.5rem;
+        justify-self: flex-start;
+        background-color: #146EAC;
+    }
+    .aliados-logos{
+        height: 12rem;
+        position: relative;
+        width: 100%;
+    }
+    .div-h2-aliados{
+        height: 35%;
+        width: 100%;
+    }
+    .h2-aliados{
+        font-family: 'Metropolis Black';
+        width: 70%;
+        position: relative;
+        left: 15%;
+        text-align: center;
+        font-size: 1.6rem;
+        color: white;
+        top: 0.5rem;
+    }
+    .div-logos-aliados{
+        height: 65%;
+    }
+    .contenedor-white-aliados{
+        background-color: white;
+        width: 80%;
+        position: relative;
+        top: 0;
+        left: 10%;
+        height: 6rem;
+        border-radius: 1rem;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        grid-template-columns: 33.3% 33.3% 33.3%;
+        grid-template-rows: 50% 50%;
+        grid-template-areas: "div-icon-aliados-b div-icon-aliados-3d div-icon-aliados-c"
+                             "div-icon-aliados-m div-icon-aliados-p div-icon-aliados-t";
+    }
+    .logo-aliados-bizarro{
+        width: 4rem;
+    }
+    .logo-aliados-che3d{
+        width: 5.5rem;
+    }
+    .logo-aliados-creatibe{
+        width: 4.5rem;
+    }
+    .logo-aliados-municipalidad{
+        width: 4.5rem;
+    }
+    .logo-aliados-peek{
+        width: 1.5rem;
+    }
+    .logo-aliados-telefonica{
+        width: 3rem;
+    }
+    .div-bottom-aliados{
+        height: 1.5rem;
+        position: relative;
+        background-color: #146EAC;
+    }
+
+    /* SECCION FORMULARIO */
+    .seccion-form{
+        height: 38rem;
+    }
+    .h3-formulario{
+        left: 10%;
+        width: 80%;
+        top: 2rem;
+        font-size: 1rem;
+    }
+    .div-container-formulario{
+        width: 70%;
+        position: relative;
+        left: 15%;
+        border-radius: 2rem;
+        top: 2.5rem;
+        background-color: #AB2123;
+        height: 29rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .form-grid-h3{
+        height: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .h3-contactanos{
+        color: white;
+        font-family: 'Metropolis Black';
+        font-size: 1.6rem;
+    }
+    .form-grid-p{
+        height: 10%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .p-contactanos{
+        color: white;
+        font-size: 0.8rem;
+        font-family: 'Metropolis Medium';
+        height: 0.6rem;
+        text-align: center;
+    }
+    .div-contactanos{
+        height: 80%;
+    }
+    .form{
+        position: relative;
+        top: 1.5rem;
+        left: 10%;
+        height: 88%;
+        width: 80%;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 16% 16% 16% 40% 13%;
+        grid-template-areas: 
+                            "name-form name-form"
+                            "telephone-form telephone-form"
+                            "email-form email-form"
+                            "textarea-form textarea-form"
+                            "btn-form btn-form";
+    }
+    .name-form{
+        grid-area: name-form;
+        width: 100%;
+        border-radius: 1rem;
+        border: none;
+        outline: none;
+        box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+        height: 2.7rem;
+        font-size: 0.8rem;
+        font-family: 'Metropolis Medium';
+        padding: 1rem;
+    }
+    .telephone-form{
+        position: relative;
+        left: 0;
+        width: 100%;
+        border-radius: 1rem;
+        outline: none;
+        box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+        grid-area: telephone-form;
+        border: none;
+        font-size: 0.8rem;
+        font-family: 'Metropolis Medium';
+        height: 2.7rem;
+        padding: 1rem;
+    }
+    .email-form{
+        grid-area: email-form;
+        height: 2.7rem;
+        box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+        border: none;
+        padding: 1rem;
+        font-size: 0.8rem;
+        outline: none;
+        font-family: 'Metropolis Medium';
+        border-radius: 1rem;
+    }
+    .textarea-form{
+        grid-area: textarea-form;
+        border: none;
+        padding: 1rem;
+        border-radius: 1rem;
+        font-size: 0.8rem;
+        outline: none;
+        box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+        font-family: 'Metropolis Medium';
+        height: 7rem;
+    }
+    .btn-form{
+        grid-area: btn-form;
+        font-family: 'Metropolis Black';
+        color: #AB2123;
+        border: none;
+        font-size: 0.8rem;
+        border-radius: 1rem;
+        box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+        font-size: 1.1rem;
+        height: 2.5rem;
+    }
+    .btn-form:hover{
+        color: #AB2123;
+        background-color: white;
+    }
+    .formulario-forma-1{
+        display: none;
+    }
+    .formulario-circle-1{
+        display: none;
+    }
+    .formulario-circle-2{
+        display: none;
+    }
+    .formulario-circle-3{
+        display: none;
+    }
+    .formulario-circle-4{
+        display: none;
+    }
+
+    /* Icon whatsapp */
+
+    .div-whatsapp-btn{
+        bottom: 0.7rem;
+        right: 1rem;
+    }
+    .icon-whatsapp{
+        width: 4.2rem;
+        opacity: 1;
+    }
+
+    /* FOOTER MOBILE */
+
+    .footer__container{
+        height: 35rem;
+        width: 100%;
+        background: linear-gradient(0deg, rgba(243, 244, 245, 0.15), rgba(243, 244, 245, 0.15)), #AB2123;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 35% 30% 13% 22%;
+        grid-template-areas: 
+                            "footer__div--apoyarnos"
+                            "footer__div--contactanos"
+                            "footer__logo--mobile"
+                            "footer__div--copyright";
+    }
+    .footer__div--apoyarnos{
+        grid-area: "footer__div--apoyarnos";
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+    .footer__apoyarnos--h3{
+        margin-top: 0;
+        width: 70%;
+        position: relative;
+        font-family: 'Metropolis Black';
+        left: 15%;
+        font-size: 1.3rem;
+        text-align: center;
+        color: #F3F4F5;
+    }
+    .footer__div--redes{
+        position: relative;
+        left: 20%;
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer__redes--a{
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer__redes--icon{
+        width: 2.2rem;
+        transition: 0.3s;
+    }
+    .footer__redes--icon:hover{
+        filter: invert(98%) sepia(100%) saturate(1%) hue-rotate(150deg) brightness(107%) contrast(101%);
+    }
+    .footer__logo--desktop{
+        display: none;
+    }
+    .footer__logo--mobile{
+        grid-area: "footer__logo--mobile";
+        display: flex;
+        visibility: visible;
+        opacity: 1;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .footer__div--contactanos{    
+        grid-area: "footer__div--contactanos";
+        display: flex;
+        height: 10rem;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .footer__contactanos--h3{
+        font-family: 'Metropolis Black';
+        margin-top: 1.3rem;
+        font-size: 1.3rem;
+        color: #F3F4F5;
+        text-align: center;
+        position: relative;
+        right: 0;
+        width: 100%;
+    }
+    .footer__div--datos{
+        height: 10rem;
+        right: 10%;
+        margin-top: 0.5rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 80%;
+    }
+    .footer__datos--div-email{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: start;
+    }
+    .footer__datos--div-number{
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        flex-direction: row;
+    }
+    .footer__datos--div-location{
+        align-items: start;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+    .footer__datos--p-e{
+        color: white;
+        font-family: 'Metropolis Medium';
+        font-size: 0.8rem;
+        margin-left: 0.65rem;
+    }
+    .footer__datos--p-n{
+        color: white;
+        font-size: 0.8rem;
+        font-family: 'Metropolis Medium';
+        margin-right: 3rem;
+    }
+    .footer__datos--p-l{
+        color: white;
+        font-size: 0.8rem;
+        font-family: 'Metropolis Medium';
+        margin-right: 0.2rem;
+    }
+    .footer__datos--img-l{
+        margin-left: 0.25rem;
+    }
+    .footer__div--copyright{
+        grid-area: "footer__div--copyright";
+        display: flex;
+        position: relative;
+        left: 10%;
+        width: 80%;
+        justify-content: center;
+    }
+    .footer__copyright--p{
+        text-align: center;
+        font-family: 'Metropolis Medium';
+        font-size: 0.9rem;
+        color: #333333;
+    }
+    .footer__forma--1{
+        position: absolute;
+        margin-top: 30.1rem;
+    }
+    .footer__forma--2{
+        position: absolute;
+        left: 15%;
+    }
+    .footer__forma--3{
+        position: absolute;
+        justify-self: end;
+        align-self: flex-end;
+    }
+    .footer__formas--width{
+        width: 6rem;
+    }
+
+    @media screen and (max-width:405px){
+        .div-inicio-grid{
+            position: relative;
+            top: 5rem;
+            width: 100%;
+            height: 30rem;
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 20% 45% 22% 13%;
+            grid-template-areas: 
+                                "div-h2-inicio"
+                                "div-img-inicio"
+                                "div-h3-inicio"
+                                "div-btn-inicio";
+        }
+        .h2-inicio{
+            width: 90%;
+            font-size: 1.7rem;
+        }
+        .h3-inicio{
+            width: 90%;
+            font-size: 1.1rem;
+        }
+        .btn-inicio{
+            width: 10rem;
+            height: 2.5rem;
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+        }
+        .img-inicio{
+            width: 16rem;
+            border-radius: 1rem;
+        }
+        .h2-productos{
+            font-family: 'Metropolis Black';
+            color: white;
+            font-size: 1.6rem;
+            position: relative;
+            top: 2rem;
+            text-align: center;
+        }
+        .position-row-productos{
+            position: relative;
+            top: 4rem;
+        }
+        .div-row-productos{
+            position: relative;
+            width: 100%;
+            height: 69rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .div-switch-flex{
+            width: 100%;
+            height: 33.3%;
+            display: flex;
+            align-items: center;
+        }
+        .container-card{
+            width: 17rem;
+            height: 22rem;
+            display: flex;
+            align-items: center;
+            background-color: #232323;
+            border-radius: 1rem;
+        }
+        .img-productos{
+            border-radius: 1rem;
+            width: 14rem;
+            height: 10rem;
+            margin-top: 0.8rem;
+        }
+        .title-card-productos{
+            color: #AB2123;
+            font-size: 1.15rem;
+            font-family: 'Metropolis Black';
+            text-align: center;
+        }
+        .p-switch{
+            font-size: 1rem;
+            font-family: 'Metropolis Medium';
+            text-align: center;
+            color: white;
+        }
+        .p-switch-abajo{
+            font-size: 0.7rem;
+            font-family: 'Metropolis Medium';
+            color: rgb(233, 233, 233);
+            text-align: center;
+        }
+        .h2-que-hacemos{
+            top: 2rem;
+        }
+        .h4-que-hacemos{
+            left: 5%;
+            width: 90%;
+            top: 3.5rem;
+            font-size: 1rem;
+        }
+        .container-div-que-hacemos{
+            display: flex;
+            flex-direction: column;
+            left: 8.75%;
+            width: 82.5%;
+            justify-content: center;
+            position: absolute;
+            top: 135rem;
+            height: 46rem;
+        }
+        .flex-div1-que-hacemos{
+            height: 40.5%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .div-1-que-hacemos{
+            background-color: #12121200;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+            height: 100%;
+            width: 100%;
+        }
+        .flex-div2-que-hacemos{
+            height: 21.5%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .div-2-que-hacemos{
+            background-color: #12121200;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+            height: 100%;
+            width: 100%;
+        }
+        .flex-div3-que-hacemos{
+            height: 38%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .div-3-que-hacemos{
+            background-color: #12121200;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+            height: 100%;
+            width: 100%;
+        }
+        .h5-que-hacemos{
+            font-size: 1.2rem;
+            margin-top: 2rem;
+        }
+        .p-que-hacemos{
+            position: relative;
+            left: 5%;
+            width: 90%;
+            margin-top: 0.68rem;
+        }
+        .h2-equipo{
+            top: 1rem;
+        }
+        .h2-aliados{
+            width: 60%;
+            position: relative;
+            left: 20%;
+            text-align: center;
+            font-size: 1.6rem;
+            color: white;
+            top: 0.5rem;
+        }
+        .logo-aliados-municipalidad{
+            width: 4.5rem;
+            margin-left: 0.4rem;
+        }
+        .div-container-formulario{
+            width: 80%;
+            position: relative;
+            left: 10%;
+            border-radius: 2rem;
+            top: 2.5rem;
+            background-color: #AB2123;
+            height: 29rem;
+            display: flex;
+            flex-direction: column;
+        }
+        .p-contactanos{
+            color: white;
+            font-size: 0.7rem;
+            font-family: 'Metropolis Medium';
+            height: 1rem;
+            text-align: center;
+        }
+        .form-grid-p{
+            height: 12%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .div-contactanos{
+            height: 78%;
+        }
+        .container-cartel-form{
+            display: flex;
+            justify-content: start;
+        }
+        .cartel-form{
+            position: relative;
+            width: 90%;
+            left: 5%;
+        }
+        .p-cartel-form{
+            font-size: 1rem;
+            top: 2.7rem;
+        }
+        .btn-cartel-form{
+            font-size: 1rem;
+            left: 25%;
+            width: 50%;
+            top: 3.2rem;
+        }
+    }
+    @media screen and (min-width:575px) and (max-width:786px){
+
+        .div-whatsapp-btn{
+            bottom: 2.5rem;
+            right: 2.5rem;
+        }
+        .btn-whatsapp{
+            width: 2.8rem;
+            height: 2.9rem;
+        }
+        .img-inicio{
+            width: 23.5rem;
+            height: 14rem;
+            border-radius: 1rem;
+        }
+        .div-h2-aliados{
+            height: 27%;
+        }
+        .h2-aliados{
+            top: 0.8rem;
+        }
+        .div-logos-aliados{
+            height: 73%;
+        }
+        .contenedor-white-aliados{
+            position: absolute;
+            top: 3.5rem;
+            height: 7rem;
+        }
+        .logo-aliados-bizarro{
+            width: 5rem;
+        }
+        .logo-aliados-che3d{
+            width: 6.5rem;
+        }
+        .logo-aliados-creatibe{
+            width: 5.5rem;
+        }
+        .logo-aliados-municipalidad{
+            width: 5.5rem;
+        }
+        .logo-aliados-peek{
+            width: 2.5rem;
+        }
+        .logo-aliados-telefonica{
+            width: 4rem;
+        }
+        .div-whatsapp-btn{
+            position: absolute;
+            bottom: 1.2rem;
+            right: 1.8rem;
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            z-index: 30;
+        }
+        .icon-whatsapp{
+            width: 4rem;
+            display: flex;
+            justify-content: center;
+            border: none;
+        }
+        .footer__copyright--p{
+            text-align: center;
+            font-family: 'Metropolis Medium';
+            position: relative;
+            top: 1rem;
+            font-size: 1rem;
+            color: #333333;
+        }
+        .footer__forma--1{
+            position: absolute;
+            margin-top: 30.1rem;
+        }
+        .equipo-forma-mobile{
+            bottom: 8.5rem;
+            visibility: visible;
+            opacity: 1;
+        }
+        .equipo-mobile-f{
+            width: 11rem;
+        }
+
+    }
+}
